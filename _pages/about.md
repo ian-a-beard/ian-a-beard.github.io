@@ -16,5 +16,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-Currently under construction.
+Hi, welcome to my secret corner of the internet. I'm Ian and I'm a 20 year old American. On this website I hope to upload my personal musings on sundry topics such as mathematics, art history, travel, and anything else my curiosity leads me to.
+
+My projects tab contains large-scale endeavors, while the blog tab (which does not currently exist) will be home to travel updates from my upcoming hiking trip around the American southwest, as well as an 8 week stay in Southeast Asia. 
+
+I'm sure this website will undergo several changes as I figure out what works best, but for now I encourage you to take a peek around. Thanks for visiting!
 

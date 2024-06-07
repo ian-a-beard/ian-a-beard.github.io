@@ -1,3 +1,11 @@
+---
+layout: page
+title: Enderton Logic Solutions
+description: My solutions to Enderton's book "Introduction to mathematical logic"
+importance: 1
+category: math
+---
+
 The following are my solutions to all exercises from the logic book by Enderton. All solutions are my own and reflect my understanding of the material as I read the textbook over the course of 14 weeks.
 # Chapter 1, Sentential Logic
 ### Section 1.1

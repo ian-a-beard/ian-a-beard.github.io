@@ -22,3 +22,5 @@ My projects tab contains large-scale endeavors, while the blog tab (which does n
 
 I'm sure this website will undergo several changes as I figure out what works best, but for now I encourage you to take a peek around. Thanks for visiting!
 
+To sign up to my email list and receive notifications when I make a new blog posts, click [this link](https://ianbeard.ck.page/c7f727312c)
+

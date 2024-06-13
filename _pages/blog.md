@@ -25,7 +25,7 @@ pagination:
 
   <div class="header-bar">
     <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
+    <h2>To receive an email when I make a post <a href="https://ianbeard.ck.page/c7f727312c">click here</a></h2>
   </div>
   {% endif %}
 

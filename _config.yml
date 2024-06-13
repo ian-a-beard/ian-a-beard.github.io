@@ -128,7 +128,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Blog # blog_name will be displayed in your blog page
-blog_description: 
+blog_description: To receive emails when I make a new post, [click here](https://ianbeard.ck.page/c7f727312c)
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

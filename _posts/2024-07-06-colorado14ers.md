@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Colorado 14ers
-date: 2015-05-15 21:01:00
+date: 2024-07-09 21:01:00
 description: I recount my experiences hiking three mountains in Colorado
 tags: hiking 
 categories: 
 thumbnail: assets/img/14ers-1.jpg
 ---
 
-A 14er (pronounced fourteener) is a mountain whose summit is at least 14 thousand feet above sea level. In the state of Colorado, there are 58 "14ers," and up until two weeks ago I had hiked 0 of them. One of the most famous peaks in Colorado Springs, Pikes Peak, is a 14er too, and several members of my family have hiked it. When back home in Ohio, my Aunt Becky and I would enthusiastically discuss our plans to take on the challenge and eventually hike some 14ers ourselves. Indeed, hiking a 14er is more tiresome then lower altitude summits because it can easily cause altitude sickness. This was the perfect kind of challenge for me to take on now that I had finished college. Thus, when it came time to decide what to do for my 21st birthday, I knew I had to finally hike a 14er.
+A 14er (pronounced fourteener) is a mountain whose summit is at least 14 thousand feet above sea level. In the state of Colorado, there are 58 "14ers," and up until two weeks ago I had hiked 0 of them. One of the most famous peaks in Colorado Springs, Pikes Peak, is a 14er too, and several members of my family have hiked it. When back home in Ohio, my aunt and I would enthusiastically discuss our plans to take on the challenge and eventually hike some 14ers ourselves. Indeed, hiking a 14er is more tiresome then lower altitude summits because it can easily cause altitude sickness. This was the perfect kind of challenge for me to take on now that I had finished college. Thus, when it came time to decide what to do for my 21st birthday, I knew I had to finally hike a 14er.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -17,7 +17,7 @@ A 14er (pronounced fourteener) is a mountain whose summit is at least 14 thousan
 </div>
 
 ### Quandary Peak
-On the morning of my birthday at a grizzly 4:30 AM I, as well as my parents, cousin, uncle, and my uncle's dog Tora, woke up and got ready with haste to head for the mountain in my uncle's truck. Towards the end of our half hour drive to the trailhead, there was a big commotion when a deer crossed the street and collided with the front of the truck. The deer was no longer, and my dad and uncle got out to drag it off the road while my mom and cousin inspected the truck for damage. Nonetheless, we piled back into the truck for the remaining few minutes of our drive.
+On the day of my birthday at 4:30 AM I, as well as my parents, cousin, uncle, and my uncle's dog Tora, woke up and got ready with haste to head for the mountain in my uncle's truck. Towards the end of our half hour drive to the trailhead, there was a big commotion when a deer crossed the street and collided with the front of the truck. The deer was no longer, and my dad and uncle got out to drag it off the road while my mom and cousin inspected the truck for damage. Nonetheless, we piled back into the truck for the remaining few minutes of our drive.
 
 After parking and double checking our gear, we started on foot towards the trail around 5:30 am (fact check). Once we got from the service road to the trail, it began with steep switchbacks through the woods. It took only a few minutes until everyone was audibly aspirating. Although just minutes ago I was feeling the morning chill, I already started shedding layers. 
 
@@ -29,7 +29,7 @@ My cousin, Raychel, kept discussing our eminent departure from the "tree line," 
     </div>
 </div>
 
-Eventually, the trail leveled out before the final ascent to the summit. The "pitch" to the summit still had quite a bit of snow on it. We were wise to bring attachable spikes for our hiking boots which make it easier to hike throgh the snow. 
+Eventually, the trail leveled out before the final ascent to the summit. The "pitch" to the summit still had quite a bit of snow on it. We were wise to bring attachable spikes for our hiking boots which make it easier to hike through the snow. 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -65,7 +65,7 @@ Once the song finished we began our descent.
 
 On the way back down my cousin and I "glissaded," which is where you slide down the mountain snow with your butt on the ground, kind of like sledding. The snow was tough, and it made my butt hurt quickly so I opted to go back on foot. Once we got past the rock scramble which led to the summit, I started playing music out of the speakers of my phone again. I played The Smiths, Pink Floyd, Fleetwood Mac, Steely Dan, and some 80s Europop favorites of mine. I was feeling fabulous at this point, and thought I had escaped any looming threats of altitude sickness. 
 
-Unfortunately, by the time we got back to the car I was suffering a splitting headache, and I didn't feel right for the rest of the day. By the evening it subsided, and I spent a joyful evening playing cards with my family. I was too excited to sleep that night. It was lucky I had a few days to recover before my next 14er.
+Unfortunately, by the time we got back to the car I was suffering a splitting headache, and I didn't feel right for the rest of the day. By the evening it subsided, and I spent a joyful evening playing cards with my family. I was too excited to sleep that night since I was solving a riddle that had stumped me for over a week. It was lucky I had a few days to recover before my next 14er.
 
 ### Humboldt Peak
 The next peak was Humboldt Peak, a "class II" 14er. Quandary Peak was a "class I" 14er, which are the easiest kind. The class numbers increase with respect to the hikes difficulty, which is measured by a variety of criteria including the length of the hike and exposure (i.e. the possibility of falling to your death).

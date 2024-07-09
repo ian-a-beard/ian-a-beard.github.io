@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Colorado 14ers
-date: 2024-07-09 21:01:00
+date: 2024-07-06 21:01:00
 description: I recount my experiences hiking three mountains in Colorado
 tags: hiking 
 categories: 

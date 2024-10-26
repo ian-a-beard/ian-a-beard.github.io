@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: left
-  image: las-vegas.jpg
+  image: cow.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>email: iab273 at nyu dot edu</p>

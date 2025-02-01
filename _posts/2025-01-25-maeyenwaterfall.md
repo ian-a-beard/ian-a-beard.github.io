@@ -59,7 +59,7 @@ A few minutes later, I catch back up with the couple. They are standing on the r
     Water buffalo at the river.
 </div>
 
-As the trail narrows, I become excited, so much so that I find myself running through the jungle. I feel like Indiana Jones, and I can't stop laughing at that thought. I hear the theme from the movie's soundtrack in my head and consider listening to music, but think better of it on account of my unfamiliarity with the terrain. This choice heightens my sensitivity to the jungle noises, and when the river is audible again, I know I'm about to cross the river again. At the crossing, the water is shallow, only coming up to my knees at its deepest points. The cold water refreshes my shins and calves. The current is strong, but with caution I ford the river. Everything's going off without a hitch so far.
+As the trail narrows, I become excited, so much so that I find myself running through the jungle. I feel like Indiana Jones, and I can't stop laughing at that thought. I hear the theme from the movie's soundtrack in my head and consider listening to music, but think better of it on account of my unfamiliarity with the terrain. This choice heightens my sensitivity to the jungle noises, and when the river becomes audible, I know I'm about to cross the river again. At the crossing, the water is shallow, only coming up to my knees at its deepest points. The cold water refreshes my shins and calves. The current is strong, but with caution I ford the river. Everything's going off without a hitch so far.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">

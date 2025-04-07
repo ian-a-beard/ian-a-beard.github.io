@@ -72,7 +72,7 @@ The sun rises, I feel calmer.
     </div>
 </div>
 
-View towards Canigou, on the right.
+View facing west.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -141,6 +141,8 @@ Great spot for a sit and snack.
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/21.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
+View towards Canigou. The trail follows the back side of this ridge.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">

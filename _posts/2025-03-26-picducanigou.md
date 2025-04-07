@@ -18,7 +18,7 @@ I had been fixing to hike it during my stay, but it wasn't until the last day th
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/bonus.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-Photo of the Canigou from the top of the farm's hill on a day prior to my hike. Canigou peak is the one most on the right, with only a horizontal strip of it visible. Despite the deception, it is taller than the peaks in front of it, those are the ones in the center of the picture.
+A photo of the Canigou from the top of the farm's hill on a day prior to my hike. Canigou peak is the one most on the right, with only a white horizontal strip of it visible. Despite the deception, it is taller than the peaks in front of it, those are the ones in the center of the picture.
 
 The day hike ended up being my longest so far, totaling 28.4 miles (45.7 km). I began early in the morning in order to finish before sundown.
 In total, it took me 12 hours and 53 minutes to complete.
@@ -235,7 +235,7 @@ We come from the north, we come from the south, from inland and from beyond the 
     </div>
 </div>
 
-Descent. On the way down I encountered two American hikers, and I chatted excitedly with them.
+Descent. On the way down I encounter two American hikers, and I chat excitedly with them.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -282,7 +282,7 @@ On the road again, little guardians who follow me as I walk past.
     </div>
 </div>
 
-I think I'm listening to Björk at this point. 
+I follow the main road to approach the farm from a different direction. I'm listening to Björk at this point.  
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">

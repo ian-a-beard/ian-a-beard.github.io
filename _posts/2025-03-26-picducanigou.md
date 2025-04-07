@@ -142,8 +142,6 @@ Great spot for a sit and snack.
     </div>
 </div>
 
-View towards Canigou. The trail follows the back side of this ridge.
-
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/22.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}

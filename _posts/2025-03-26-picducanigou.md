@@ -9,13 +9,22 @@ thumbnail: assets/img/picducanigou/41.JPG
 ---
 
 ### Preamble
-
 In the year 2024 from October 11 to November 24, I lived on a small horse farm in the foothills of the Pyrenees Mountains in France. 
 On my last full day before leaving I summited the nearby Canigou mountain.
 I had been fixing to hike it during my stay, but it wasn't until the last day that both the weather and my confidence aligned and I finally gave it a shot.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/picducanigou/bonus.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+Photo of the Canigou from the top of the farm's hill on a day prior to my hike. Canigou peak is the one most on the right, with only a horizontal strip of it visible. Despite the deception, it is taller than the peaks in front of it, those are the ones in the center of the picture.
+
 The day hike ended up being my longest so far, totaling 28.4 miles (45.7 km). I began early in the morning in order to finish before sundown.
 In total, it took me 12 hours and 53 minutes to complete.
 Here is a sequence of photos I took which illustrate the endeavor.
+
+
 
 ### Hiking Pic du Canigou
 
@@ -87,7 +96,7 @@ Maybe you can spot the deer on the right side of the hill.
     </div>
 </div>
 
-Beautiful banana. View facing west towards the Mediterranean sea.
+Beautiful banana. View facing east towards the Mediterranean sea.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -133,7 +142,7 @@ Great spot for a sit and snack.
     </div>
 </div>
 
-View towards canigou. The trail follows the back side of this ridge.
+View towards Canigou. The trail follows the back side of this ridge.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -153,7 +162,7 @@ View towards canigou. The trail follows the back side of this ridge.
     </div>
 </div>
 
-Getting closer, shark brain.
+Getting closer, shark brain activates.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -218,7 +227,7 @@ We come from the north, we come from the south, from inland and from beyond the 
     </div>
 </div>
 
-Ecstatic, 11:10am.
+11:10 A.M. Ecstatic.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -259,7 +268,7 @@ On the road again, little guardians who follow me as I walk past.
     </div>
 </div>
 
-Different and same. 3:22 P.M.
+3:22 P.M. Different and same. 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -297,21 +306,9 @@ Looking northeast.
     </div>
 </div>
 
-5:03 P.M.
-
-I pass a flock of sheep and get barked at by a Patou for the last time.
+5:03 P.M. I pass a flock of sheep and get barked at by a Patou for the last time.
 My host at the farm picks me up in his truck and we go have a beer with a neighbor.
 
 The end.
-
-### P.S.
-Bonus photo from a prior day of Valmanya below Pic du Canigou.
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/picducanigou/bonus.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-</div>
-
 
 If you've enjoyed this post, consider signing up for my [email list](https://ianbeard.ck.page/c7f727312c), where I alert readers of any new blog posts I've shared.

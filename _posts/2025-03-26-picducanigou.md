@@ -10,10 +10,13 @@ thumbnail:
 
 ### Preamble
 
-In the year 2024 from October 11 to November 24 I lived on a small horse farm inthe foothills of the Pyrenees Mountains in France. 
-On my last full day there I summited a nearby mountain, the Pic du Canigou. 
-It ended up being a 28.4 mile hike, which took me 11 hours and 37 minutes to complete.
-Here is a sequence of photos I took during that hike which illustrate the endeavor.
+In the year 2024 from October 11 to November 24, I lived on a small horse farm inthe foothills of the Pyrenees Mountains in France. 
+On my last full day before leaving I summited the nearby Canigou mountain.
+I had been fixing to hike it during my stay, but it wasn't until the last day that the weather and my confidence aligned and I finally gave it a shot.
+I began the hike early in the morning to finish the 28.4 mile hike before sundown.
+In total, it took me 11 hours and 37 minutes to complete.
+Here is a sequence of photos I took which illustrate the endeavor.
+
 ### Hiking Pic du Canigou
 
 <div class="row mt-3">
@@ -44,7 +47,7 @@ It's pitch black outside.
     </div>
 </div>
 
-I get over the foothill and arrive at the village Valmanya. The moon has become visible again, emitting some light.
+I get over the foothill and arrive at the village of Valmanya. The moon has become visible again, emitting some light.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -68,7 +71,7 @@ View towards Canigou, on the right.
     </div>
 </div>
 
-7:30 am now.
+7:30 am now. What a look.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -90,7 +93,7 @@ Beautiful banana.
     </div>
 </div>
 
-Arriving at the Refuge des Cortalets, where some people hikers sleep overnight.
+Arriving at the Refuge des Cortalets, where some hikers sleep overnight.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -98,7 +101,7 @@ Arriving at the Refuge des Cortalets, where some people hikers sleep overnight.
     </div>
 </div>
 
-Sneaky inspection.
+Très sale.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -146,15 +149,11 @@ View towards canigou. The trail follows the back side of this ridge.
     </div>
 </div>
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/picducanigou/26.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-</div>
+Getting closer, shark brain.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/picducanigou/27.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/picducanigou/26.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
@@ -164,7 +163,7 @@ View towards canigou. The trail follows the back side of this ridge.
     </div>
 </div>
 
-Snowy rock scramble.
+Snowy scramble.
  
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -188,15 +187,28 @@ Summit.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/picducanigou/34b.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/38.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
+A monument to the Catalan people.
+There is an annual tradition where locals summit the Canigou with torches.
+
+In the distance one makes out the Mediterranean Sea.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/picducanigou/39.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
+A closer look at the structure and its sign.
+
+Translation of the sign's script:
+
+"What one century build, the next destroys, but God's monument remains, and storms, gusts of wind, hatred and war cannot damage the Canigou or insult the high Pyrenees.
+
+We come from the north, we come from the south, from inland and from beyond the seas, and we don't believe in borders"
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -212,7 +224,7 @@ Ecstatic, 11:10am.
     </div>
 </div>
 
-Descent.
+Descent. On the way down I encountered two American hikers, and I chatted excitedly with them.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -245,6 +257,8 @@ Near the road, little guardians.
     </div>
 </div>
 
+Different and same.
+
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/52b.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -256,6 +270,8 @@ Near the road, little guardians.
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/53.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
+I think I'm listening to Björk at this point. 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -271,6 +287,8 @@ Local beef?
     </div>
 </div>
 
+Looking northeast, a little moody.
+
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/58.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -281,5 +299,15 @@ Passing a flock of sheep and getting barked at by a Patou for the last time.
 My host at the farm picks me up in his truck and we go have a beer with a neighbor.
 
 End of recollection.
+
+### P.S.
+Bonus photo from a prior day of the village Valmanya below Pic du Canigou.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/picducanigou/bonus.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
 
 If you've enjoyed this post, consider signing up for my [email list](https://ianbeard.ck.page/c7f727312c), where I alert readers of any new blog posts I've shared.

@@ -1,20 +1,20 @@
 ﻿---
 layout: post
-title: Pic du Canigou Hike Photo Recollection
+title: My longest hike ever
 date: 2025-03-26 21:01:00
-description: 
+description: A photo sequence with abridged commentary of my hike to the top of Pic du Canigou
 tags: hiking 
 categories: 
-thumbnail:
+thumbnail: assets/img/picducanigou/41.JPG
 ---
 
 ### Preamble
 
-In the year 2024 from October 11 to November 24, I lived on a small horse farm inthe foothills of the Pyrenees Mountains in France. 
+In the year 2024 from October 11 to November 24, I lived on a small horse farm in the foothills of the Pyrenees Mountains in France. 
 On my last full day before leaving I summited the nearby Canigou mountain.
-I had been fixing to hike it during my stay, but it wasn't until the last day that the weather and my confidence aligned and I finally gave it a shot.
-I began the hike early in the morning to finish the 28.4 mile hike before sundown.
-In total, it took me 11 hours and 37 minutes to complete.
+I had been fixing to hike it during my stay, but it wasn't until the last day that both the weather and my confidence aligned and I finally gave it a shot.
+The day hike ended up being my longest so far, totaling 28.4 miles (45.7 km). I began early in the morning in order to finish before sundown.
+In total, it took me 12 hours and 53 minutes to complete.
 Here is a sequence of photos I took which illustrate the endeavor.
 
 ### Hiking Pic du Canigou
@@ -25,7 +25,7 @@ Here is a sequence of photos I took which illustrate the endeavor.
     </div>
 </div>
 
-Setting out at 4am.
+Setting out. 4:10 A.M.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -39,7 +39,7 @@ Setting out at 4am.
     </div>
 </div>
 
-It's pitch black outside.
+It's pitch black outside. From the farm I head east, following a dirt road to the top of the hill. On the other side, I take a trail towards Valmanya, the village where the real trail begins.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -47,7 +47,7 @@ It's pitch black outside.
     </div>
 </div>
 
-I get over the foothill and arrive at the village of Valmanya. The moon has become visible again, emitting some light.
+I get over the foothill and arrive at Valmanya. There is no movement or noise from the village as I walk through. After a short walk up another road I get on the actual trail, which begins in a wooded area. It is still dark at this point.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -55,7 +55,7 @@ I get over the foothill and arrive at the village of Valmanya. The moon has beco
     </div>
 </div>
 
-Sunrise.
+The sun rises, I feel calmer.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -71,7 +71,7 @@ View towards Canigou, on the right.
     </div>
 </div>
 
-7:30 am now. What a look.
+7:30 A.M. What a look.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -79,13 +79,15 @@ View towards Canigou, on the right.
     </div>
 </div>
 
+Maybe you can spot the deer on the right side of the hill.
+
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/13.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
-Beautiful banana.
+Beautiful banana. View facing west towards the Mediterranean sea.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -122,6 +124,8 @@ Great spot for a sit and snack.
         {% include figure.liquid loading="eager" path="assets/img/picducanigou/20.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
+
+9:15 A.M.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -194,7 +198,7 @@ Summit.
 A monument to the Catalan people.
 There is an annual tradition where locals summit the Canigou with torches.
 
-In the distance one makes out the Mediterranean Sea.
+In the distance one makes out the sea.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -202,9 +206,7 @@ In the distance one makes out the Mediterranean Sea.
     </div>
 </div>
 
-A closer look at the structure and its sign.
-
-Translation of the sign's script:
+Translation of sign:
 
 "What one century build, the next destroys, but God's monument remains, and storms, gusts of wind, hatred and war cannot damage the Canigou or insult the high Pyrenees.
 
@@ -249,7 +251,7 @@ Near the bottom of the trail. This was my least favorite part of the hike. In th
     </div>
 </div>
 
-Near the road, little guardians.
+On the road again, little guardians who follow me as I walk past.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -257,7 +259,7 @@ Near the road, little guardians.
     </div>
 </div>
 
-Different and same.
+Different and same. 3:22 P.M.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -287,7 +289,7 @@ Local beef?
     </div>
 </div>
 
-Looking northeast, a little moody.
+Looking northeast.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -295,13 +297,15 @@ Looking northeast, a little moody.
     </div>
 </div>
 
-Passing a flock of sheep and getting barked at by a Patou for the last time.
+5:03 P.M.
+
+I pass a flock of sheep and get barked at by a Patou for the last time.
 My host at the farm picks me up in his truck and we go have a beer with a neighbor.
 
-End of recollection.
+The end.
 
 ### P.S.
-Bonus photo from a prior day of the village Valmanya below Pic du Canigou.
+Bonus photo from a prior day of Valmanya below Pic du Canigou.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">

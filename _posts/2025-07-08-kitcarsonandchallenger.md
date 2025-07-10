@@ -2,7 +2,7 @@
 layout: post
 title: Hiking Kit Carson and Challenger Point
 date: 2025-07-08 21:01:00
-description: A photo sequence with captions of my recent hike of two Colorado 14ers
+description: A photo sequence with captions from my recent hike of two Colorado 14ers
 tags: hiking 
 categories: 
 thumbnail: assets/img/kitcarsonandchallenger/thumbnail.JPG
@@ -22,7 +22,7 @@ Morning view of Willow Lake
         {% include figure.liquid loading="eager" path="assets/img/kitcarsonandchallenger/IMG_6000.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-View of Kit Carson from the ascent of Challenger Point
+View of Kit Carson (peak on the right) from the ascent of Challenger Point
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -50,21 +50,21 @@ View of Great Sand Dunes and Blanca group from the other side of Challenger
         {% include figure.liquid loading="eager" path="assets/img/kitcarsonandchallenger/IMG_6010.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-View towards Challenger Point's summit, on the right
+View towards Challenger Point's summit, on the right. Kit Carson is the semicircular peak on the left.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/kitcarsonandchallenger/IMG_6011.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-Exposed edge of Challenger
+The edge
+
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/kitcarsonandchallenger/IMG_6018.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-pic of me with sign on the top of challenger
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -106,7 +106,7 @@ Scramble to Kit Carson's summit
         {% include figure.liquid loading="eager" path="assets/img/kitcarsonandchallenger/IMG_6032.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-pic of me with sign at top of kit carson
+Kit Carson summit.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -169,17 +169,8 @@ Willow Lake while descending, landscape
         {% include figure.liquid loading="eager" path="assets/img/kitcarsonandchallenger/IMG_6049.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-Mountain goats, from a distance## Preamble
-In the year 2024 from October 11 to November 24, I lived on a small horse farm in the foothills of the Pyrenees Mountains in France.
-On my last full day before leaving I summited the nearby Canigou mountain.
-I had been fixing to hike it during my stay, but it wasn't until the last day that both the weather and my confidence aligned and I finally gave it a shot.
+Mountain goats, from a distance
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/picducanigou/bonus.JPG" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-</div>
-@@@                                                                                                                                        
-                                                                                                                         11,1          Top
+The end.
 
-
+Thank you for visiting!

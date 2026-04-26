@@ -1,14 +1,15 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #222; 
+    background-color: linen; /* A soft, warm paper-like grey */
+    font-family: Georgia, "Times New Roman", serif; 
     line-height: 1.6;
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
-    color: #333;
-    background-color: #fafafa;
 }
 
 nav {
+    font-family: -apple-system, sans-serif; /* Clean, modern menu */
     margin-bottom: 50px;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
@@ -24,9 +25,50 @@ nav a {
 nav a:hover { color: #000; }
 
 img.profile-pic {
-    width: 150px;
-    border-radius: 50%;
-    filter: grayscale(100%); /* Minimalist touch */
+    width: 300px;
+}
+
+/* The Grid Container */
+.post-grid {
+    display: grid;
+    /* This creates a responsive grid automatically */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px; /* Space between the cards */
+    margin-top: 20px;
+}
+
+/* Individual Cards */
+.post-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps the image corners rounded */
+    transition: transform 0.2s; /* Subtle lift on hover */
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card a {
+    text-decoration: none;
+    color: inherit; /* Keeps text the same color as the body */
+}
+
+/* The Thumbnail */
+.thumb {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover; /* Crops image to fit perfectly without stretching */
+    display: block;
+}
+
+.post-info {
+    padding: 5px, 15px, 15px, 15px;
+}
+
+.post-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
 }
 
 .item { margin-bottom: 30px; }

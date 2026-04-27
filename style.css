@@ -1,7 +1,7 @@
 body {
     color: #222; 
     background-color: linen; /* A soft, warm paper-like grey */
-    font-family: Georgia, "Times New Roman", serif; 
+    font-family: 'Times New Roman', serif; 
     line-height: 1.6;
     max-width: 800px;
     margin: 40px auto;
@@ -40,7 +40,7 @@ img.profile-pic {
 /* Individual Cards */
 .post-card {
     border: 1px solid #eee;
-    border-radius: 8px;
+    border-radius: 0px;
     overflow: hidden; /* Keeps the image corners rounded */
     transition: transform 0.2s; /* Subtle lift on hover */
 }
@@ -71,6 +71,97 @@ img.profile-pic {
     font-size: 1.2em;
 }
 
+/* Post Content Styling */
+.post-content {
+    max-width: 700px; /* Narrower for better reading */
+    margin: 0 auto;
+}
+
+.post-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+}
+
+.post-content .description {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 2em;
+}
+
+.post-content figure {
+    margin: 2em 0;
+}
+
+.post-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.post-content figcaption {
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    margin-top: 10px;
+}
+
+blockquote {
+    border-left: 3px solid #ccc;
+    margin: 2em 0;
+    padding-left: 20px;
+    font-style: italic;
+    color: #444;
+}
+
+/* --- LIGHTBOX STYLES --- */
+
+/* Make all blog post images look clickable */
+.post-content img {
+    cursor: zoom-in;
+    transition: opacity 0.2s;
+}
+
+.post-content img:hover {
+    opacity: 0.9;
+}
+
+/* The dark background overlay */
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Hidden by default */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    cursor: zoom-out;
+}
+
+/* When the lightbox is active, fade it in */
+#lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* The enlarged image itself */
+#lightbox img {
+    max-width: 90%;
+    max-height: 90vh; /* 90% of the viewport height */
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    object-fit: contain; /* Prevents stretching */
+}
+
 .item { margin-bottom: 30px; }
 .item h3 { margin-bottom: 5px; }
 .date { font-size: 0.8em; color: #999; }
+
+

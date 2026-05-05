@@ -1,7 +1,19 @@
+/* --- HEADER FONTS --- */
+h1, h2, h3, h4, h5, h6 {
+    /* A clean, modern sans-serif stack */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600; /* Makes it bold, but not overwhelmingly thick */
+    color: #222; /* A slightly softer black that is easier on the eyes */
+    line-height: 1.2;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+
 body {
     color: #222; 
-    background-color: linen; /* A soft, warm paper-like grey */
-    font-family: 'Times New Roman', serif; 
+    background-color: white; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     max-width: 800px;
     margin: 40px auto;
@@ -63,11 +75,11 @@ img.profile-pic {
 }
 
 .post-info {
-    padding: 5px, 15px, 15px, 15px;
+    padding: 15px;
 }
 
 .post-info h3 {
-    margin: 0 0 5px 0;
+    margin: 5px 0;
     font-size: 1.2em;
 }
 

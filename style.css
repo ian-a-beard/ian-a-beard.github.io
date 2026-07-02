@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     color: #222; 
-    background-color: #FEFEFA; 
+    background-color: #F9F9F9; 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     max-width: 800px;
@@ -38,6 +38,60 @@ nav a:hover { color: #000; }
 
 img.profile-pic {
     width: 300px;
+}
+
+/* ==========================================================================
+   Desert Shrine Story Layout (Floating Image with Text Wrap)
+   ========================================================================== */
+
+/* Outer wrapper to keep the story contained and centered */
+.story-container {
+    max-width: 900px;        /* Limits total width for readability */
+    width: 100%;
+    margin: 40px auto;       /* Centers the container on the page */
+    padding: 0 20px;         /* Padding on the sides for mobile */
+}
+
+/* Clearfix: Ensures the container wraps around the floated image completely */
+.story-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Image Wrapper (Now floated to the left) */
+.story-image {
+    float: left;
+    width: 45%;              /* Increased width to make the image bigger (adjust as needed) */
+    margin-right: 30px;      /* Pushes the text away from the right side of the image */
+    margin-bottom: 15px;     /* Pushes the text away if it wraps underneath the image */
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;      /* Optional: slightly rounds the image corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+}
+
+/* Text Styling */
+.story-text p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+}
+
+/* Responsive Design: Forces the image to take full width on smaller screens */
+@media (max-width: 600px) {
+    .story-image {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
 
 /* The Grid Container */

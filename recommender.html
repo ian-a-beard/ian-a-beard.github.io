@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Culture Lens: Movie Recommender</title>
+    <!-- 1. Link to your main CSS file so the #F9F9F9 background applies -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 2. Keep only the specific styles needed for your app's list -->
     <style>
-        body { background-color: #f9f9f9; font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; line-height: 1.6; }
-        select, button { width: 100%; padding: 10px; margin-top: 10px; font-size: 16px; }
-        ul { list-style-type: none; padding: 0; }
-        li { background: #F9F9F9; margin: 5px 0; padding: 10px; border-radius: 4px; }
-    </style>
-</head>
-<body>
+    /* Target both the input box and the button so they behave exactly the same */
+    input, select, button { 
+        width: 100%; 
+        padding: 10px; 
+        margin-top: 10px; 
+        font-size: 16px; 
+        box-sizing: border-box; /* The magic property that aligns their widths */
+        border: 1px solid #ccc; /* Gives them identical borders */
+        border-radius: 4px;
+    }
+    
+    /* Make the button look clickable */
+    button {
+        background-color: #f2f2f2;
+        color: gray;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    button:hover {
+        background-color: #d4d4d4;
+    }
 
+    ul { list-style-type: none; padding: 0; }
+    li { background: #ffffff; margin: 5px 0; padding: 10px; border-radius: 4px; border: 1px solid #ddd; }
+</style>
+</head>
+
+<body>
+    <nav>
+        <a href="projects.html">← Back to Projects</a>
+    </nav>
     <h2>Primitive Movie Recommender</h2>
     <p>Select a movie to see what the TF-IDF content-based model suggests next:</p>
 
     <!-- Searchable dropdown list using native HTML5 datalist -->
-    <input list="movies" id="movie-choice" placeholder="Type a movie name..." style="width: 100%; padding: 10px; font-size: 16px;">
+    <input list="movies" id="movie-choice" placeholder="Type a movie name..." >
     <datalist id="movies"></datalist>
 
     <button onclick="getRecommendations()">Get Recommendations</button>

@@ -46,10 +46,11 @@ img.profile-pic {
 
 /* Outer wrapper to keep the story contained and centered */
 .story-container {
-    max-width: 900px;        /* Limits total width for readability */
+    max-width: 900px;
     width: 100%;
-    margin: 40px auto;       /* Centers the container on the page */
-    padding: 0 20px;         /* Padding on the sides for mobile */
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* Add this line to fix the mobile width! */
 }
 
 /* Clearfix: Ensures the container wraps around the floated image completely */
@@ -89,13 +90,8 @@ img.profile-pic {
     .story-image {
         float: none;
         width: 100%;
-        /* Centers the image block using auto margins, while keeping the bottom gap */
-        margin: 0 auto 20px auto; 
-    }
-    
-    /* Forces the text to center on mobile devices */
-    .story-text p {
-        text-align: center;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 

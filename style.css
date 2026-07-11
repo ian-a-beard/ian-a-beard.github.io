@@ -306,8 +306,4 @@ blockquote {
         flex-direction: column;
         align-items: flex-start;
     }
-    .project-image {
-        width: 100%;
-        height: 200px;
-    }
 }

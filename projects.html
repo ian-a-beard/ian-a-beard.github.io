@@ -1,14 +1,36 @@
-<section>
-    <h2>Projects</h2>
-    <div class="item">
-        <h3>Project One</h3>
-        <p>A brief description of what this project does and why it's cool.</p>
-        <a href="https://github.com/yourlink">View Source</a>
-    </div>
-    
-    <div class="item">
-        <h3>Project Two</h3>
-        <p>Another minimalist tool built for speed.</p>
-        <a href="#">Live Demo</a>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="posts.html">Posts</a>
+        <a href="projects.html">Projects</a>
+    </nav>
+
+    <main class="projects-container">
+        <h2>Projects</h2>
+
+        <!-- Project 1: Movie Recommender -->
+        <article class="project-card">
+            <!-- Replace 'thumbnail.jpg' with an actual image in your folder -->
+            <img src="img/dirt.png" alt="Culture Lens Movie Recommender" class="project-image">
+            
+            <div class="project-info">
+                <h3>Primitive Movie Recommender</h3>
+                <p>A bare-bones content-based recommendation system built with Python, Pandas, and Scikit-Learn. It uses TF-IDF on genre matrices from the MovieLens 32M dataset to find similar movies.</p>
+                <a href="recommender.html" class="project-link">View Project &rarr;</a>
+            </div>
+        </article>
+
+        <!-- You can just copy and paste the <article> block above to add your next project! -->
+
+    </main>
+</body>
+</html>

@@ -306,4 +306,82 @@ blockquote {
         flex-direction: column;
         align-items: flex-start;
     }
+} 
+
+/* ==========================================================================
+   About Page Layout
+   ========================================================================== */
+
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Left Column: Image Gallery */
+.about-gallery {
+    flex: 1; /* Takes up half the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; /* Matches your other image corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Matches your story image shadow */
+    object-fit: cover;
+    aspect-ratio: 4 : 3; /* Keeps portrait images uniform. Adjust if your images are landscape */
+}
+
+/* Image Switcher Buttons */
+.gallery-controls {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-controls button {
+    background-color: #f2f2f2;
+    color: gray;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.gallery-controls button:hover {
+    background-color: #d4d4d4;
+}
+
+/* Style for the currently selected number */
+.gallery-controls button.active {
+    background-color: #d4d4d4;
+    color: #222;
+}
+
+/* Right Column: Text */
+.about-bio {
+    flex: 1.2; /* Gives the text slightly more room than the images */
+}
+
+.about-bio h1 {
+    margin-top: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column; /* Stacks gallery on top, bio on bottom */
+        gap: 20px;
+    }
+    
+    .about-gallery, .about-bio {
+        width: 100%;
+    }
 }

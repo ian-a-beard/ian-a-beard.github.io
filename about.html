@@ -3,15 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts | My Website</title>
+    <title>About | My Website</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="posts.html">Posts</a>
-	<a href="projects.html">Projects</a>
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="posts.html">posts</a>
+        <a href="projects.html">projects</a>
     </nav>
+
+    <div class="about-container">
+        <!-- Left Side: Pictures -->
+        <div class="about-gallery">
+            <!-- The main image. Change 'img1.jpg' to your actual first image file -->
+            <img id="about-image" src="img/about-pics/about-1.jpg" alt="About Me">
+            
+            <!-- Number Buttons -->
+            <div class="gallery-controls">
+                <button class="active" onclick="changeImage('img/about-pics/about-1.jpg', this)">1</button>
+                <button onclick="changeImage('img/about-pics/about-2.jpg', this)">2</button>
+                <!-- Add more buttons here if you have more pictures -->
+            </div>
+        </div>
+
+        <!-- Right Side: Bio (Now using the story-text class) -->
+        <div class="about-bio story-text">
+                <p>I am a second-year graduate student in UC Irvine's math department. I am interested in using mathematical models to build “recommender systems.” These systems provide the basis for online interaction, and in doing so, they mirror and shape the development of 21st-century culture. By applying these systems to art historical data there would exist a quantitative approach for measuring the success of theories in the field. This may lead to a greater cross-pollination between contemporary data science and the humanities.</p>
+                <p>During my undergrad at NYU, I double majored in mathematics and art history (with a healthy dose of computer science). Though I am first and foremost a puzzle-solver, a lifelong fascination with aesthetic experiences and art-making has led me toward my current interests.</p>
+                <P>When I’m not learning about the math that makes such analyses possible, I practice creativity on a personal level by making textile art and shooting film photography. My time off is more like "aggressively resting," which often includes travel and hiking. I treasure most my memories of the sublime beauty beheld on long hikes through America's deserts.</p>
+            </div>
+    </div>
+
+    <!-- The Javascript for the image switcher -->
+    <script>
+        function changeImage(imagePath, btnElement) {
+            // 1. Change the image source
+            document.getElementById('about-image').src = imagePath;
+            
+            // 2. Remove the 'active' class from all buttons
+            let buttons = document.querySelectorAll('.gallery-controls button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // 3. Add the 'active' class to the clicked button
+            btnElement.classList.add('active');
+        }
+    </script>
 </body>
 </html>

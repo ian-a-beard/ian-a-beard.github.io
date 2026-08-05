@@ -159,7 +159,7 @@
               <p style="font-size: 12px; color: #666; margin-top: 5px;"><em>Example: df_movies.head(3)</em></p>
             </div>
 
-            <p>There are 20 possible genres that any given film can have. Therefore, we map each movie \(i\) to a 20-dimensional binary vector, denoted as \(\mathbf{m}_i \in \{0,1\}^{20}\). Non-zero entries in this vector correspond to the genres that the film fits into. By stacking these row vectors, we construct the movie-genre matrix \(M\). In this matrix, every row represents a single movie and every column represents one of the 20 genres.</p>
+            <p>There are 20 possible genres that any given film can have. Therefore, we map each movie \(i\) to a 20-dimensional binary vector, denoted as \(\mathbf{m}_i \in \{0,1\}^{20}\). Non-zero entries in this vector correspond to the genres that the film fits into. This is a one-hot encoding of the film. By stacking these row vectors, we construct the movie-genre matrix \(M\). In this matrix, every row represents a single movie and every column represents one of the 20 genres.</p>
 
             <p>With the movies represented in this way, the item-item recommendation system is essentially a nearest-neighbor search. Given a particular movie, we need to find the "closest" movies in this 20-dimensional vector space.</p>
 
@@ -264,7 +264,7 @@ MODEL EVALUATION RESULTS (k = 10)
 
             <p>We might naturally suspect that recommending the more "popular" movie will perform better by our evaluation metric. Let's see if introducing a popularity mask to our system makes our Precision@k score go up at all.</p>
 
-            <p>All we need is a metric for popularity, which we define by the total number of ratings a movie has received. For any fixed cutoff point \(N \in \mathbb{N}\), we restrict our candidate pool to only include films with at least \(N\) ratings. Let's calculate the Precision@5 score for the explicit feedback model with this new popularity filter and see how it stacks up against our earlier baselines:</p>
+            <p>All we need is a metric for popularity, which we define by the total number of ratings a movie has received. For any fixed cutoff point \(N \in \mathbb{N}\), we restrict our candidate pool to only include films with at least \(N\) ratings. Let's calculate the Precision@5 score for the explicit feedback model with this a popularity filter of \(N=1000\) and see how it stacks up against our earlier baselines:</p>
 
             <pre style="background-color: #f6f8fa; padding: 15px; border-radius: 6px; overflow-x: auto; border: 1px solid #d0d7de; font-family: monospace; font-size: 13px;"><code>==================================================
 MODEL EVALUATION RESULTS (k = 5)
@@ -275,11 +275,11 @@ MODEL EVALUATION RESULTS (k = 5)
 [+] Explicit Feedback Model
     └── Average Precision@5 : 0.0054 (0.54%)
     
-[+] Explicit Feedback Model + Popularity Mask
-    └── Average Precision@5 : 0.0152 (1.52%)
+[+] Explicit Feedback Model + Popularity Mask N = 1000
+    └── Average Precision@5 : 0.0128 (1.28%)
 ==================================================</code></pre>
 
-            <p>The new model jumps to 1.52%. That's almost three times as good as the explicit feedback model without popularity filtering! It appears that, by our defined metric, a recommender system benefits significantly from putting popularity restrictions on its output. Let's see if testing different cutoff points \(N\) allows us to find the optimal parameter for the model.</p>
+            <p>The new model jumps to 1.28%. That's over twice as good as the explicit feedback model without popularity filtering! It appears that, by our defined metric, a recommender system benefits significantly from putting popularity restrictions on its output. Let's see if testing different cutoff points \(N\) allows us to find the optimal parameter for the model.</p>
 
             <div style="text-align: center; margin: 25px 0;">
                 <img src="img/primitive-movie-recommender/precision5.png" alt="Precision@5 across Popularity Cutoffs" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
@@ -295,7 +295,7 @@ MODEL EVALUATION RESULTS (k = 5)
 
             <p>Recall the previously cited figure that state-of-the-art collaborative filtering models achieve around a 30% Precision@10 score. Compared to the Precision@10 scores computed above, the gap between our simple content-based model and a collaborative filtering architecture suddenly seems much less imposing.</p>
 
-            <p>For those of us interested in "popular" culture, the popularity filter has proved itself a boon for making recommendations. Introducing a popularity filter is like building a bridge between the clean ideal of mathematics and the messy reality of human culture. The interactive web app above implements the popularity filter with </p>
+            <p>For those of us interested in "popular" culture, the popularity filter has proved itself a boon for making recommendations. Introducing a popularity filter is like building a bridge between the clean ideal of mathematics and the messy reality of human culture. The interactive web app above implements the popularity filter with the popularity cutoff set at \(N=50,000\).</p>
 
             <h5 style="margin-top: 25px; margin-bottom: 10px; font-size: 16px;">The Discovery Trade-off</h5>
             <p>One obvious trade-off is that the system will no longer recommend items deemed less popular, effectively removing the opportunity for users to discover emerging titles. In the case of movies, restricting recommendations to films with over 50,000 ratings means that a film must already have enough real-life "cultural support" to enter the candidate pool. This inevitably excludes some lower-budget or indie films.</p>

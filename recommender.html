@@ -9,20 +9,17 @@
     
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> 
 
-    <!-- 2. Keep only the specific styles needed for your app's list -->
     <style>
-    /* Target both the input box and the button so they behave exactly the same */
     input, select, button { 
         width: 100%; 
         padding: 10px; 
         margin-top: 10px; 
         font-size: 16px; 
-        box-sizing: border-box; /* The magic property that aligns their widths */
-        border: 1px solid #ccc; /* Gives them identical borders */
+        box-sizing: border-box;
+        border: 1px solid #ccc;
         border-radius: 4px;
     }
     
-    /* Make the button look clickable */
     button {
         background-color: #f2f2f2;
         color: gray;
@@ -36,7 +33,45 @@
     }
 
     ul { list-style-type: none; padding: 0; }
-</style>
+
+    /* NEW STYLES: Custom Autocomplete Dropdown */
+    .autocomplete-container {
+        position: relative; /* Anchors the absolute positioned dropdown */
+        width: 100%;
+    }
+
+    .autocomplete-list {
+        position: absolute;
+        top: 100%; /* Positions it directly below the input */
+        left: 0;
+        right: 0;
+        z-index: 99; /* Keeps it on top of other elements */
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        max-height: 250px; /* Forces a scrollbar if the list is too long */
+        overflow-y: auto;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: none; /* Hidden by default */
+        margin: 0;
+    }
+
+    .autocomplete-list li {
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        color: #333;
+    }
+
+    .autocomplete-list li:hover {
+        background-color: #f2f2f2;
+    }
+    
+    .autocomplete-list li:last-child {
+        border-bottom: none;
+    }
+    </style>
 </head>
 
 <body>
@@ -46,9 +81,12 @@
     <h2>Primitive Movie Recommender</h2>
     <p>Select a movie to see what the content-based model suggests next:</p>
 
-    <!-- Searchable dropdown list using native HTML5 datalist -->
-    <input list="movies" id="movie-choice" placeholder="Type a movie name..." >
-    <datalist id="movies"></datalist>
+    <!-- NEW HTML: Wrapper and custom dropdown list -->
+    <div class="autocomplete-container">
+        <!-- autocomplete="off" stops the browser from showing its own history suggestions -->
+        <input type="text" id="movie-choice" placeholder="Type a movie name..." autocomplete="off">
+        <ul id="autocomplete-list" class="autocomplete-list"></ul>
+    </div>
 
     <button onclick="getRecommendations()">Get Recommendations</button>
 
@@ -57,23 +95,63 @@
 
     <script>
         let recData = {};
+        let movieTitles = [];
 
-        // 1. Fetch the static JSON file when the page loads
+        // 1. Fetch the data
         fetch('recommendations.json')
             .then(response => response.json())
             .then(data => {
                 recData = data;
-                const datalist = document.getElementById('movies');
-                
-                // Populates the dropdown menu with all available movie titles
-                Object.keys(data).sort().forEach(title => {
-                    let option = document.createElement('option');
-                    option.value = title;
-                    datalist.appendChild(option);
-                });
+                // Store titles in an array for easy filtering
+                movieTitles = Object.keys(data).sort();
             });
 
-        // 2. Look up the chosen movie and display the pre-computed array
+        // 2. Custom Autocomplete Logic
+        const input = document.getElementById('movie-choice');
+        const autocompleteList = document.getElementById('autocomplete-list');
+
+        input.addEventListener('input', function() {
+            const val = this.value;
+            autocompleteList.innerHTML = ''; // Clear previous suggestions
+            
+            if (!val) {
+                autocompleteList.style.display = 'none';
+                return;
+            }
+
+            // Filter titles that include the typed text (case-insensitive)
+            const filteredTitles = movieTitles.filter(title => 
+                title.toLowerCase().includes(val.toLowerCase())
+            );
+            
+            if (filteredTitles.length > 0) {
+                autocompleteList.style.display = 'block';
+                
+                filteredTitles.forEach(title => {
+                    let li = document.createElement('li');
+                    li.textContent = title;
+                    
+                    // When a user taps a suggestion, fill the input and hide the list
+                    li.addEventListener('click', function() {
+                        input.value = title;
+                        autocompleteList.style.display = 'none';
+                    });
+                    
+                    autocompleteList.appendChild(li);
+                });
+            } else {
+                autocompleteList.style.display = 'none';
+            }
+        });
+
+        // Close the dropdown if the user clicks anywhere else on the page
+        document.addEventListener('click', function(e) {
+            if (e.target !== input) {
+                autocompleteList.style.display = 'none';
+            }
+        });
+
+        // 3. Keep your existing recommendation function
         function getRecommendations() {
             const choice = document.getElementById('movie-choice').value;
             const resultsList = document.getElementById('results-list');
@@ -87,7 +165,7 @@
                 });
             } else {
                 let li = document.createElement('li');
-                li.textContent = "Movie not found. Please select an option from the list.";
+                li.textContent = "Movie not found. Please select a valid option from the list.";
                 resultsList.appendChild(li);
             }
         }

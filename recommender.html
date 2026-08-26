@@ -78,8 +78,8 @@
     <nav>
         <a href="projects.html">← Back to Projects</a>
     </nav>
-    <h2>Primitive Movie Recommender</h2>
-    <p>Select a movie to see what the content-based model suggests next:</p>
+    <h2>Content-Based Movie Recommendation Engine</h2>
+    <p>Select a movie to see what the model suggests next:</p>
 
     <!-- NEW HTML: Wrapper and custom dropdown list -->
     <div class="autocomplete-container">
@@ -280,7 +280,7 @@
 
             <p>This effectively scales each raw movie genre vector by how much the user liked or disliked it before summing them together. Finally, we compute the cosine similarity between this explicit user profile and the movie matrix just as we did before, surfacing the top 5 highest-scoring movies as recommendations.</p>
 
-            <p>To see the mechanics of how this approach can be implemented, the complete pipeline is available to view as a Jupyter notebook on my <a href="link.html">github</a>.</p>
+            <p>To see the mechanics of how this approach can be implemented, the complete pipeline is available to view as a Jupyter notebook on my <a href="https://github.com/ian-a-beard/movie-recommender-system/tree/main">github</a>.</p>
         </div>
 
         <!-- Section 3: Metrics -->
@@ -300,7 +300,9 @@
 
             \[\text{Average Precision@}k = \frac{1}{\vert{}U\vert{}}\sum_{u\in U}\frac{\vert{}T_u^k\cap W_u\vert{}}{k}\]
 
-            <p>We first evaluate both models using a recommendation window of \(k=5\):</p>
+            <p>As a baseline for this metric, the Precision@K was evaluated with \(k=5\) for recommendations that were randomly generated for a user. This yielded a 0.06% Precision@5 score.</p>
+
+            <p>Now, we evaluate the Preicision@5 score of both the implicit and explicit models:</p>
             
             <pre style="background-color: #f6f8fa; padding: 15px; border-radius: 6px; overflow-x: auto; border: 1px solid #d0d7de; font-family: monospace; font-size: 13px;"><code>==================================================
 MODEL EVALUATION RESULTS (k = 5)
@@ -314,8 +316,8 @@ MODEL EVALUATION RESULTS (k = 5)
 
             <p>Two immediate observations emerge from these results:</p>
             <ol>
-                <li>Lackluster Performance: The overall precision is modest, with the better-performing model achieving a 0.54% success rate.</li>
-                <li>Explicit vs. Implicit Gap: Despite the low baseline, the explicit feedback model is <em>80% more successful</em> than the implicit feedback model at \(k=5\), confirming our intuition that incorporating user sentiment (star ratings) yields better recommendations.</li>
+                <li>Lackluster Performance: Although the recommendations were 500% more precise than the randomly generated ones, the overall precision is modest, with the better-performing model achieving a 0.54% success rate.</li>
+                <li>Explicit vs. Implicit Gap: Despite the low precision, the explicit feedback model is <em>80% more successful</em> than the implicit feedback model at \(k=5\), confirming our intuition that incorporating user sentiment (star ratings) yields better recommendations.</li>
             </ol>
 
             <p>Expanding the recommendation window to \(k=10\) reveals an interesting shift in model behavior:</p>

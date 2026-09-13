@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Comparison: Content-Based vs. Matrix Factorization</title>
+    <!-- 1. Link to your main CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> 
+
+    <style>
+    input, select, button { 
+        width: 100%; 
+        padding: 10px; 
+        margin-top: 10px; 
+        font-size: 16px; 
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        background-color: #2b2b2b;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+    }
+    
+    button:hover {
+        background-color: #444444;
+    }
+
+    ul { list-style-type: none; padding: 0; }
+
+    /* Custom Autocomplete Dropdown */
+    .autocomplete-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .autocomplete-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        max-height: 250px;
+        overflow-y: auto;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: none;
+        margin: 0;
+    }
+
+    .autocomplete-list li {
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        color: #333;
+    }
+
+    .autocomplete-list li:hover {
+        background-color: #f2f2f2;
+    }
+    
+    .autocomplete-list li:last-child {
+        border-bottom: none;
+    }
+
+    /* Side-by-Side Comparison Container */
+    .comparison-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .comparison-container {
+            grid-template-columns: 1fr; /* Stack vertically on small screens */
+        }
+    }
+
+    .model-card {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .model-card h3 {
+        margin-top: 0;
+        color: #111;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    .model-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-bottom: 12px;
+    }
+
+    .badge-cb { background-color: #e3f2fd; color: #0d47a1; }
+    .badge-mf { background-color: #e8f5e9; color: #1b5e20; }
+
+    .rec-list li {
+        padding: 8px 12px;
+        margin-bottom: 6px;
+        background-color: #f9f9f9;
+        border-left: 3px solid #ccc;
+        border-radius: 2px;
+        font-size: 15px;
+    }
+
+    .model-card:nth-child(1) .rec-list li { border-left-color: #1976d2; }
+    .model-card:nth-child(2) .rec-list li { border-left-color: #388e3c; }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="projects.html">← Back to Projects</a>
+    </nav>
+    <h2>Head-to-Head Recommender System Inspector</h2>
+    <p>Select a movie to compare <b>Content-Based Metadata Filtering</b> against <b>Latent SGD Matrix Factorization</b>:</p>
+
+    <!-- Autocomplete Input -->
+    <div class="autocomplete-container">
+        <input type="text" id="movie-choice" placeholder="Type a movie name..." autocomplete="off">
+        <ul id="autocomplete-list" class="autocomplete-list"></ul>
+    </div>
+
+    <button onclick="getRecommendations()">Get Side-by-Side Recommendations</button>
+
+    <!-- Side-by-Side Model Results -->
+    <div class="comparison-container">
+        <!-- Content-Based Column -->
+        <div class="model-card">
+            <span class="model-badge badge-cb">Metadata & Feature Overlap</span>
+            <h3>Content-Based Filtering</h3>
+            <ul id="cb-results-list" class="rec-list">
+                <li style="border:none; background:none; color:gray;">Select a movie above to view recommendations.</li>
+            </ul>
+        </div>
+
+        <!-- Matrix Factorization Column -->
+        <div class="model-card">
+            <span class="model-badge badge-mf">Behavioral SGD Latent Factors</span>
+            <h3>Matrix Factorization (UV-Decomp)</h3>
+            <ul id="mf-results-list" class="rec-list">
+                <li style="border:none; background:none; color:gray;">Select a movie above to view recommendations.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let cbRecData = {};
+        let mfRecData = {};
+        let movieTitles = [];
+
+        // 1. Fetch both datasets concurrently using Promise.all
+        Promise.all([
+            fetch('recommendations.json').then(res => res.json()),
+            fetch('matrix-factorization-recommendations.json').then(res => res.json())
+        ])
+        .then(([cbData, mfData]) => {
+            cbRecData = cbData;
+            mfRecData = mfData;
+
+            // Combine unique keys across both models for complete autocomplete search
+            const allTitles = new Set([
+                ...Object.keys(cbData),
+                ...Object.keys(mfData)
+            ]);
+            movieTitles = Array.from(allTitles).sort();
+        })
+        .catch(err => console.error("Error loading recommendation JSON datasets:", err));
+
+        // 2. Custom Autocomplete Logic
+        const input = document.getElementById('movie-choice');
+        const autocompleteList = document.getElementById('autocomplete-list');
+
+        input.addEventListener('input', function() {
+            const val = this.value;
+            autocompleteList.innerHTML = '';
+            
+            if (!val) {
+                autocompleteList.style.display = 'none';
+                return;
+            }
+
+            const filteredTitles = movieTitles.filter(title => 
+                title.toLowerCase().includes(val.toLowerCase())
+            );
+            
+            if (filteredTitles.length > 0) {
+                autocompleteList.style.display = 'block';
+                
+                // Limit autocomplete display to top 20 matches for fast DOM rendering
+                filteredTitles.slice(0, 20).forEach(title => {
+                    let li = document.createElement('li');
+                    li.textContent = title;
+                    
+                    li.addEventListener('click', function() {
+                        input.value = title;
+                        autocompleteList.style.display = 'none';
+                    });
+                    
+                    autocompleteList.appendChild(li);
+                });
+            } else {
+                autocompleteList.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (e.target !== input) {
+                autocompleteList.style.display = 'none';
+            }
+        });
+
+        // 3. Populate Both Model Lists
+        function getRecommendations() {
+            const choice = document.getElementById('movie-choice').value;
+            const cbList = document.getElementById('cb-results-list');
+            const mfList = document.getElementById('mf-results-list');
+            
+            cbList.innerHTML = "";
+            mfList.innerHTML = "";
+
+            // Populate Content-Based Model
+            if (cbRecData[choice] && cbRecData[choice].length > 0) {
+                cbRecData[choice].forEach(movie => {
+                    let li = document.createElement('li');
+                    li.textContent = movie;
+                    cbList.appendChild(li);
+                });
+            } else {
+                let li = document.createElement('li');
+                li.style.borderLeftColor = "#e57373";
+                li.textContent = "No content-based recommendations found for this title.";
+                cbList.appendChild(li);
+            }
+
+            // Populate Matrix Factorization Model
+            if (mfRecData[choice] && mfRecData[choice].length > 0) {
+                mfRecData[choice].forEach(movie => {
+                    let li = document.createElement('li');
+                    li.textContent = movie;
+                    mfList.appendChild(li);
+                });
+            } else {
+                let li = document.createElement('li');
+                li.style.borderLeftColor = "#e57373";
+                li.textContent = "No matrix factorization recommendations found for this title.";
+                mfList.appendChild(li);
+            }
+        }
+    </script>
+
+    <!-- Visual Divider -->
+    <hr style="margin: 50px 0; border: 1px solid #ddd;">
+</body>
+</html>

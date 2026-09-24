@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | My Website</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+    window.MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <nav>
@@ -15,19 +25,30 @@
     </nav>
 
     <main class="projects-container">
-        <!-- Project 1: Movie Recommender -->
+        <article class="project-card">
+            <!-- Replace 'thumbnail.jpg' with an actual image in your folder -->
+            <img src="img/glowstone.png" alt="Collaborative Filtering Movie Recommendation Engine" class="project-image">
+            
+            <div class="project-info">
+                <h3>Collaborative Filtering Movie Recommender & Latent Space Analysis</h3>
+                <p>A collaborative filtering movie recommender built with Python using the MovieLens 32M dataset. It implements low-rank matrix factorization optimized via stochastic gradient descent with $L_2$ regularization, leverages @njit C-compilation for a 100x training speedup across 25.6M ratings, and delivers an 1100% precision increase over my previous content-based model's baselines while uncovering hidden taste clusters using t-SNE visualization.</p>
+                <a href="matrix-factorization-recommender.html" class="project-link">View Project &rarr;</a>
+            </div>
+        </article>
+
         <article class="project-card">
             <!-- Replace 'thumbnail.jpg' with an actual image in your folder -->
             <img src="img/dirt.png" alt="Content-Based Movie Recommendation Engine" class="project-image">
             
             <div class="project-info">
                 <h3>Content-Based Movie Recommendation Engine</h3>
-                <p>An movie recommender system built with Python and Scipy using the MovieLens 32M dataset. It explores the transition from item-item to user-item recommendations, evaluates implicit vs. explicit feedback models, and demonstrates how popularity filtering boosts recommendation precision from under 1% to over 16%.</p>
-                <a href="recommender.html" class="project-link">View Project &rarr;</a>
+                <p>A movie recommender system built with Python and Scipy using the MovieLens 32M dataset. It explores the transition from item-item to user-item recommendations, evaluates implicit vs. explicit feedback models, and demonstrates how popularity filtering boosts recommendation precision from under 1% to over 16%.</p>
+                <a href="content-based-recommender.html" class="project-link">View Project &rarr;</a>
             </div>
         </article>
 
-        <!-- You can just copy and paste the <article> block above to add your next project! -->
+        
+
 
     </main>
 </body>
